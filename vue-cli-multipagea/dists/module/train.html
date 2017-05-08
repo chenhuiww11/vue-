@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <title>点亮火车站</title>
+    <link rel="stylesheet" href="//appnew.ly.com/hc/1/style/base.css">
+    
+<link href="../static/css/module/train.33f3ac45a0241daf588a4dd9f0bea0ee.css?11f8c0b76538136749b8" rel="stylesheet"></head>
+<body>
+<script type="text/javascript" src="//js.40017.cn/cn/min/??/touch/hb/c/bridge.2.1.6.js?v=2016091401"></script>
+<script src="http://js.40017.cn/cn/min/???/touch/hb/c/2/js/zeptoJs.1.1.6.js?v=1.1.6" type="text/javascript" charset="utf-8"></script>
+<script src="http://js.40017.cn/cn/min/??/touch/hb/c/2/js/seaJs.2.2.3.js,/touch/hb/c/2/js/h5only/confh5/confH5Js.1.0.6.js?v=1.0.2" type="text/javascript" charset="utf-8"></script>
+<script src="//file.40017.cn/fed/touch/js/modules/location/0.0.6/location.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//	埋点
+	var setEvent = function (type){
+	 		var params = {
+					"param": {
+						"category": "222",
+						"action": "2213",
+						"optLabel": "dianli",
+						"optValue": type,
+						"pagename": "youbi"
+					},
+					"CBPluginName": "CbObject", //回调，自定义
+					"CBTagName": "CbFunction" //回调,自定义
+				}
+				window._tc_bridge_util.set_category_event(params);
+     }
+//	跳转
+	var jump = function (url,name){
+			setEvent(name);
+			if(url==2){
+				 if(window._tc_bridge_public.isAppVersionGreatThan(824)){
+				 	location.href='https://app.ly.com/deal/membersign.html'
+				 	return false;
+				 }else{
+				 	location.href='http://shouji.17u.cn/internal/h5/file/67/view/main.html?#/index'
+				 	return false;
+				 }
+			}
+					if(url.indexOf('shouji') != -1 || url.indexOf('tctclient') != -1) {
+						window.location.href = url;
+						return false;
+					}
+					setTimeout(function() {
+						window._tc_bridge_web.open_newurl({
+							"param": {
+								"tagname": "tagback",
+								"openParams": "newWindow,hideBottom",
+								"jumpUrl": url
+							},
+							"CBPluginName": "_tc_web_util",
+							"CBTagName": "open_newurl"
+						});
+					}, 0)
+}
+</script>
+<div id="app"></div>
+<!-- built files will be auto injected -->
+<script type="text/javascript" src="../static/js/manifest.c97a6579a04d10ad071e.js?11f8c0b76538136749b8"></script><script type="text/javascript" src="../static/js/vendor.9fc7657be6c28e7d7ec6.js?11f8c0b76538136749b8"></script><script type="text/javascript" src="../static/js/module/train.b770db0ac67875c02110.js?11f8c0b76538136749b8"></script></body>
+</html>
