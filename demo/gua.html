@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html id='ht'>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="x5-fullscreen" content="true">
+	<meta name="full-screen" content="yes">
+	<meta name="msapplication-tap-highlight" content="no" />
+	<title>demo</title>
+	<link rel="stylesheet" href="css/demo.css?1">
+	<style>
+		.infoBox {
+			width: 100%;
+			height: 100%;
+			padding: 8% 0;
+			border-radius: 10px;
+			text-align: center;
+			background: rgba(239,227,197, 0.5);
+			position: absolute;
+			margin:0 auto;
+
+		}
+		.infoTtl{
+			font-size: 24px;
+			font-weight: bold;
+			color: #d81226
+		}
+		.writeBox{
+			margin: 20px auto 0;
+			width:80%;
+		}
+		 .infoBox input{
+			width: 100%;
+			padding: 3px 2%;
+			height: 30px;
+			line-height: 24px;
+			border:none;
+			background: #f4f4f4;
+			margin-bottom: 10px;
+			vertical-align: middle;
+			outline: none;
+			font-size: 16px;
+			-webkit-appearance: none;
+			 border-radius:5px;
+		}
+
+		 .infoBox textarea{
+			width:100%;
+			height: 50px;
+			padding: 5px 3%;
+			border:none;
+			background: #f4f4f4;
+			resize:none;
+			font-size: 16px;
+			 border-radius:5px;
+			-webkit-appearance: none;
+		}
+		input::-webkit-input-placeholder, textarea::-webkit-input-placeholder{
+			font-size: 16px;
+			color: #999;
+		}
+		input:-moz-placeholder, textarea:-moz-placeholder {
+			font-size: 16px;
+			color: #999;
+		}
+		input::-moz-placeholder, textarea::-moz-placeholder {
+			font-size: 16px;
+			color: #999;
+		}
+		input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+			font-size: 16px;
+			color: #999;
+		}
+		.useRule{
+			width: 100%;
+			margin: 0 auto 20px;
+			line-height: 1.51;
+			font-size: 12px;
+			color: #999;
+			text-align: left;
+		}
+		.commonBtn{
+			width: 80%;
+			margin: 0 auto;
+			height: 40px;
+			background: #d81226;
+			border-radius: 5px;
+			font-size: 20px;
+			line-height: 38px;
+			color: #fbe5ac;
+			font-weight:bold;
+		}
+		.writeBox p.username{
+			height: 50px;
+		}
+		.suc_box{
+			display: none;
+			position: absolute;
+			left:50%;
+			font-size: 30px;
+			top:50%;
+			transform: translate(-50%,-50%);
+		}
+	</style>
+</head>
+<body ontouchmove="event.preventDefault()">
+<ul id="navBar">
+	<li class=""><img src="img/next.png" /></li>
+	<li><img src="img/next.png" /></li>
+	<li><img src="img/next.png" /></li>
+	<li><img src="img/next.png" /></li>
+</ul>
+<div id="pageContain">
+	<div class="page page1 current" data-timer = 't1'>
+		<div class="contain">
+			<p class="txt pic1"><img src="img/page3_pic1.png"></p>
+			<p class="txt pic2"><img src="img/page3_pic2.png"></p>
+		</div>
+	</div>
+
+	<div class="page page2 righttxt">
+		<div class="contain">
+			<p class="txt pic1 showop"><img src="img/page4_pic1.png" /></p>
+			<p class="txt pic2 showop1"><img src="img/page4_pic2.png" /></p>
+			<p class="txt pic3 showop2"><img src="img/page4_pic3.png" /></p>
+			<p class="txt pic4 showop3"><img src="img/page4_pic4.png" /></p>
+		</div>
+	</div>
+
+	<div class="page page3 righttxt" data-timer = 't3'>
+		<div class="contain">
+			<p class="txt pic1 showop"><img src="img/page5_pic1.png" /></p>
+			<p class="txt pic2 showop1"><img src="img/page5_pic2.png" /></p>
+			<p class="txt pic3 showop2"><img src="img/page5_pic3.png" /></p>
+		</div>
+	</div>
+	<div class="page page4 righttxt" data-timer = 't4'>
+		<div class="contain">
+			<div class="infoBox">
+				<p class="infoTtl">领取人信息</p>
+				<div class="writeBox">
+					<p class="username"><input placeholder="姓名" id="username" type="text" /></p>
+					<p class="phoneNum"><input type='number' onpropertychange="OnPropChanged (event)" placeholder="手机号" id='tel'  oninput="if(value.length>11)value=value.slice(0,11)" /></p>
+					<p class="address"><textarea placeholder="填写邮寄地址" id="address"></textarea></p>
+					<p class="useRule">这里是使用规则这里是使用规则这里是使用规则这里是使用规则这里是使用规则这里是使用规则这里是使用规则这里是使用规则这里是使用规则</p>
+				</div>
+				<p class="commonBtn submitBtn">提交</p>
+
+			</div>
+			<div class="suc_box">
+				提交成功
+			</div>
+		</div>
+	</div>
+
+
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js" ></script>
+<script type="text/javascript" src="js/fullPage.min.js" ></script>
+<script type="text/javascript" src="js/demo.js?3" ></script>
+
+</body>
+
+</html>
